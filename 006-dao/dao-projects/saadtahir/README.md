@@ -23,7 +23,9 @@ Users can `convert` dao tokens to STX at any time using the `convert` method.
 Following set of commands can be run on clarinet console using `clarinet console` command on terminal. The commands registers the deployer as member, creates a proposal that transfers 10STX to the organisation as charity, casts a yes vote, advances the chain tip to 20 to process the required proposal in the required time of 10 blocks, evaluates all the proposals in the processed-proposals list and executes the transaction on success. Your output should be 10 DAO tokens in the organisation's stacks address which can then be converted by that organisation principal using `convert` function in dao contract.
 
 (contract-call? .dao add-dao .dao-token u100000)<br />
+
 (contract-call? .dao register-member .dao-token)<br />
+
 (contract-call? .dao propose-proposal .dao-token 'STNHKEPYEPJ8ET55ZZ0M5A34J0R3N5FM2CMMMAZ6 u10)<br />
 (contract-call? .dao cast-vote .dao-token true u1)<br />
 (contract-call? .dao process-proposal u1)<br />
